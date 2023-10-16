@@ -1,6 +1,7 @@
-# youtube
+# clone do youtube
 
-A new Flutter project.
+1- Alterar a chave da google no arquivo API. 
+
 
 ## Getting Started
 

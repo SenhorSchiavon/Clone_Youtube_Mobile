@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:youtube/Biblioteca.dart';
+import 'package:youtube/EmAlta.dart';
+import 'package:youtube/Inicio.dart';
+import 'package:youtube/Inscricoes.dart';
 
 class Principal extends StatefulWidget {
   const Principal({super.key});
@@ -9,6 +13,13 @@ class Principal extends StatefulWidget {
 
 class _PrincipalState extends State<Principal> {
   int indiceSelecionado = 0;
+
+  List Telas = [
+    Inicio(),
+    EmAlta(),
+    Inscricoes(),
+    Biblioteca()
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,7 +42,7 @@ class _PrincipalState extends State<Principal> {
 
 
       ),
-      body: Container(),
+      body: Telas[indiceSelecionado],
       bottomNavigationBar: BottomNavigationBar(
         onTap: (indice){
           setState(() {
